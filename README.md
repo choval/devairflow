@@ -2,6 +2,14 @@
 
 Making Airflow pipelines easier to develop locally.
 
+DevAirflow is a command-line tool for Mac & Linux that runs Airflow locally using Docker, streamlining development. It eliminates the need for user management, separate databases, schedulers, and workers.
+
+This setup enables rapid iteration throughout the development process.
+
+> [!IMPORTANT]  
+> This tool is intended for development purposes only.  
+> DO NOT USE IN PRODUCTION ENVIRONMENTS.
+
 ## Installation
 
 Requires:
