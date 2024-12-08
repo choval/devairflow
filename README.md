@@ -64,6 +64,7 @@ I automate data processes:
 ## Command help
 
 ```
+
 =========================================
  DevAirflow 2.10.3
  Simple local development airflow image
@@ -71,12 +72,30 @@ I automate data processes:
 =========================================
 
 
+ Checks
+-----------------------------------------
+ [!] Missing dags folder in current dir
+ [!] Suggested '.env' missing in current dir
+
+
  Connections and variables
 -----------------------------------------
  Load them by adding them as env vars in .env
 
+ These will get added and show up in the UI
+ DEVAIRFLOW_VAR_FOO=BAR
+ DEVAIRFLOW_CONN_MYDB='mysql://user:passwd@host:port/schema?k=v'
+ Use URI format for connections
+
+ These will load directly into Airflow, they won't show up in UI
  AIRFLOW_VAR_FOO=BAR
- AIRFLOW_CONN_MYDB='mysql://user:passwd@host:port/schema?k=v'
+ AIRFLOW_CONN_MYDB='{
+   "conn_type": "mysql",
+   "login": "user",
+   "password": "passwd",
+   "host": "hostname",
+   "schema": "schemaname"
+ }'
 
 
  Requirements
@@ -103,11 +122,14 @@ I automate data processes:
 
  stop         Stops DevAirflow
 
- update       Refreshes the docker image
+ update       Updates itself
 
  format       Formats files: py, json, yaml, js, sql
 
  shell        Opens a shell to the docker instance
+
+ rootshell    Opens a shell to the docker instance as root
+
 ```
 
 ## License
