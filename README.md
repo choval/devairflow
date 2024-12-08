@@ -20,9 +20,10 @@ Requires:
 ```sh
 curl -o ~/devairflow https://raw.githubusercontent.com/choval/devairflow/master/devairflow
 chmod +x ~/devairflow
-# Move to a bin path like ~/bin or ~/local/bin or ~/.local/bin
 mv ~/devairflow ~/.local/bin/devairflow
 ```
+
+Move to a bin path like ~/bin or ~/local/bin or ~/.local/bin
 
 ## Usage
 
